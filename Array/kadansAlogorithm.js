@@ -43,3 +43,17 @@ var maxProduct = function(nums) {
 
   return result;
 };
+
+//Best Time to Buy and Sell Stock (LeetCode #121)
+var maxProfit = function(prices) {
+  let minPrice = prices[0];
+  let maxProfit = 0;
+  for (let i = 1; i < prices.length; i++) {
+    maxProfit = Math.max(maxProfit, prices[i] - minPrice);
+    minPrice = Math.min(minPrice, prices[i]);
+  }
+  return maxProfit;
+};
+
+
+//Best Time to Buy and Sell Stock (LeetCode #121)
