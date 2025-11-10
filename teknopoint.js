@@ -19,6 +19,7 @@ console.log(revStr("hello"));
       return res;
    }
    console.log(palindrom("rarr"))
+
 // Write a function to find the factorial of a number.
 function factorial(n){
     if(n <= 1) return 1;
@@ -26,6 +27,7 @@ function factorial(n){
     return n*factorial(n - 1);
 }
 console.log(factorial(5))
+ 
 // Implement a function to check if a number is prime.
 function primeNum(num){
   for(let i = 2; i < num/2; i++){
@@ -45,6 +47,7 @@ for (let i = 0; i < arr.length-1; i++) {
 return res;
 }
 console.log(removeDuplicate([1,3,4,2,3,5,3,6,3,6,2,6,2,45,3,2,2453,24]).sort((a,b)=> a-b))
+
 // Implement a function to find the largest element in an array.
 function largestElement(arr){
     let large = -Infinity;

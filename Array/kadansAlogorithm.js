@@ -24,3 +24,22 @@ var maxSubArray = function(nums) {
    }
    return maxSum;
 };
+
+//Maximum Product Subarray (LeetCode #152)
+var maxProduct = function(nums) {
+  let curMax = nums[0];
+  let curMin = nums[0];
+  let result = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    const n = nums[i];
+    if (n < 0) [curMax, curMin] = [curMin, curMax]; // swap when negative
+
+    curMax = Math.max(n, curMax * n);
+    curMin = Math.min(n, curMin * n);
+
+    result = Math.max(result, curMax);
+  }
+
+  return result;
+};
